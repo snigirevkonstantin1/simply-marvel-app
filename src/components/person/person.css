@@ -1,0 +1,52 @@
+.btnchacter {
+    border-radius: 90px;
+    position: absolute;
+    margin-left: 92%;
+    margin-top: 20px;
+    z-index: 100;
+}
+
+
+.person__head {
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    align-self: center;
+    font: 400 60px/1 'Roboto Condensed', 'Bold';
+    display: block;
+}
+.slider__content{
+    display: flex;
+    background-color: #343a40;
+    color: white;
+    padding-top: 10px;
+    justify-content: space-evenly;
+}
+.slider__image{
+    padding: 10px;
+}
+
+.swiper-container {
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0) 100%);
+}
+.person_description{
+    font: 400 1.2rem Open Sans,Trebuchet MS,Helvetica,Arial,sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.swiper-wrapper{
+    margin-top: 40px;
+}
+.person_description{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    line-height: 1.5em;
+    letter-spacing: 0.04em;
+    word-spacing: 0.1em;
+}
+.person_description td {
+    vertical-align: top;
+    padding-left: 10px;
+    border-top: 1px solid red;
+    text-align: left;
+}
