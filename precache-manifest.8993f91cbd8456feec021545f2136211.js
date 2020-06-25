@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bac757eb0907be2d61d4a8aa6ec62609",
+    "revision": "b1ffe1272e760a623fce2e3268509623",
     "url": "/simplymarvelapp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/simplymarvelapp/static/css/2.9109016a.chunk.css"
   },
   {
-    "revision": "aec79c763fa08a9629cd",
+    "revision": "759da4a2790b007c2962",
     "url": "/simplymarvelapp/static/css/main.ebeab49f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/simplymarvelapp/static/js/2.f6387603.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aec79c763fa08a9629cd",
-    "url": "/simplymarvelapp/static/js/main.7aa870b0.chunk.js"
+    "revision": "759da4a2790b007c2962",
+    "url": "/simplymarvelapp/static/js/main.d573d250.chunk.js"
   },
   {
     "revision": "a4422b6a8f2f8470297b",
