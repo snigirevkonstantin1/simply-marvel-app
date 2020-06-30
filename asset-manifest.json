@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/simplymarvelapp/static/css/main.64f0f078.chunk.css",
+    "main.css": "/simplymarvelapp/static/css/main.9cedb6a1.chunk.css",
     "main.js": "/simplymarvelapp/static/js/main.0baa3cf4.chunk.js",
     "main.js.map": "/simplymarvelapp/static/js/main.0baa3cf4.chunk.js.map",
     "runtime-main.js": "/simplymarvelapp/static/js/runtime-main.527cf617.js",
@@ -9,17 +9,17 @@
     "static/js/2.cd6d219a.chunk.js": "/simplymarvelapp/static/js/2.cd6d219a.chunk.js",
     "static/js/2.cd6d219a.chunk.js.map": "/simplymarvelapp/static/js/2.cd6d219a.chunk.js.map",
     "index.html": "/simplymarvelapp/index.html",
-    "precache-manifest.1a9f27475d043a1fc600955ffb9c5257.js": "/simplymarvelapp/precache-manifest.1a9f27475d043a1fc600955ffb9c5257.js",
+    "precache-manifest.cdeb8535951f78f526eb56805c39905a.js": "/simplymarvelapp/precache-manifest.cdeb8535951f78f526eb56805c39905a.js",
     "service-worker.js": "/simplymarvelapp/service-worker.js",
     "static/css/2.9109016a.chunk.css.map": "/simplymarvelapp/static/css/2.9109016a.chunk.css.map",
-    "static/css/main.64f0f078.chunk.css.map": "/simplymarvelapp/static/css/main.64f0f078.chunk.css.map",
+    "static/css/main.9cedb6a1.chunk.css.map": "/simplymarvelapp/static/css/main.9cedb6a1.chunk.css.map",
     "static/js/2.cd6d219a.chunk.js.LICENSE.txt": "/simplymarvelapp/static/js/2.cd6d219a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.527cf617.js",
     "static/css/2.9109016a.chunk.css",
     "static/js/2.cd6d219a.chunk.js",
-    "static/css/main.64f0f078.chunk.css",
+    "static/css/main.9cedb6a1.chunk.css",
     "static/js/main.0baa3cf4.chunk.js"
   ]
 }
