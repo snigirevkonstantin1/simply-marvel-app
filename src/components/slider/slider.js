@@ -3,6 +3,7 @@ import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 import CharacterDetals, {Record}  from '../character-detail';
 import { connect } from 'react-redux';
+import './slider.css'
 
 
 const Slider = (props) => {

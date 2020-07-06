@@ -3,11 +3,11 @@ import { YOUR_PUBLIC_KEY, YOUR_PRIVATE_KEY } from './key'
 //http://i.annihil.us/u/prod/marvel/i/mg/1/b0/5269678709fb7/portrait_uncanny.jpg
 
 export default class MarvelApiService {
-    _baseUrl = `http://gateway.marvel.com/v1/public/`;
+    _baseUrl = `https://gateway.marvel.com/v1/public/`;
     _md5Hash = `${CryptoJS.MD5(`1${YOUR_PRIVATE_KEY}${YOUR_PUBLIC_KEY}`).toString()}`;
     _urlParams = `?ts=1&apikey=${YOUR_PUBLIC_KEY}&hash=${this._md5Hash}`;
     _itemPerPage = 12;
-    _defaultImage = 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_incredible.jpg'
+    _defaultImage = 'https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_incredible.jpg'
 
 
     async getResource(direction, offsetCount){
@@ -30,7 +30,8 @@ export default class MarvelApiService {
       };
 
     getResourceUrlTarget = async(url) => {
-      const response = await fetch(`${url}${this._urlParams}`)
+      const newUrl = this._toHttps(url)
+      const response = await fetch(`${newUrl}${this._urlParams}`)
       const textResponse = await response.json();
       return textResponse.data;
     }
@@ -59,7 +60,8 @@ export default class MarvelApiService {
 
     getOneEvent = async(url)=> {
       try{
-        const response = await fetch(`${url}?ts=1&apikey=${YOUR_PUBLIC_KEY}&hash=${this._md5Hash}`);
+        const newUrl = this._toHttps(url)
+        const response = await fetch(`${newUrl}?ts=1&apikey=${YOUR_PUBLIC_KEY}&hash=${this._md5Hash}`);
         const textResponse = await response.json();
         return this._toPrettyEvent(textResponse.data.results[0]);}
       catch(err) {
@@ -76,7 +78,11 @@ export default class MarvelApiService {
       const res = await this.getResource('characters', 1);
       return res.total
     };
-
+    
+    _toHttps = (url) => {
+      const re = /^(http)/
+      return url.replace(re, 'https')
+    }
     _toPrettyEvent = ({id, title, thumbnail, description}) => {
       const descriptionSize =  (description != null)?description.split(' ').length : 0;
       return {

@@ -5,7 +5,7 @@ import { MarvelServiceProvider } from '../marvel-context';
 import { Provider } from 'react-redux';
 import './app.css';
 import store from '../../store';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { CharactersPage, PersonPage } from '../pages';
 import ErrorBoundry from '../errorboundry';
 import Comics from '../comics';
@@ -20,7 +20,7 @@ const App = () => {
         <ErrorBoundry>
           <MarvelServiceProvider value={api}>
           <div className="marvel__app">
-            <BrowserRouter>
+            <Router>
                 <Header />
               <Switch>
                 <Route path='/' exact component={ CharactersPage } />
@@ -34,7 +34,7 @@ const App = () => {
                   const {id} = match.params;
                   return <Comics id={id}/>}} />
               </Switch>
-            </BrowserRouter>
+            </Router>
           </div>
           </MarvelServiceProvider>
         </ErrorBoundry>

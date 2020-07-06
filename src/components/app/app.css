@@ -2,7 +2,7 @@
     font-size: 1rem;
     min-height: 500px;
 }
-body {
+/* body {
     background:
                 linear-gradient(170deg, transparent 80%, #91CBCF 30%) ,
                 linear-gradient(156deg, transparent 68%, #E3D9C3 30%),
@@ -15,4 +15,4 @@ body {
                 linear-gradient(0deg, transparent 0%,  #91CBCF 0%);
     background-size: 100% 100%;
     background-position: center; 
-}
+} */

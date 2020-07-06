@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './character-detail.css';
 import Spiner from '../spiner';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import {totalLoad} from '../../actions';
-import {TestPage} from '../testpage'
+
+import { useEffect, useState } from 'react';
+// import {TestPage} from '../testpage'
+// import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+// import {totalLoad} from '../../actions';
 //getComicsBooks
 
 const Record = ({ items, onSelectItem}) => {
@@ -19,33 +21,19 @@ const Record = ({ items, onSelectItem}) => {
 export { Record}
 
 
-class CharacterDetals extends Component{
-    state = {
-        items: undefined
-    }
-
-    componentDidMount(){
-        const {marvelApi, item} = this.props
-        marvelApi(item.resourceURI).then((data)=> this.setState(()=> {
-            return {
-                items:data
-            }
-        })).then(()=>this.props.totalLoad)
-    }
+const CharacterDetals = (props) => {
+    const [items, setItems] = useState(undefined)
+    const {marvelApi, item, children, onSelectItem} = props
+    useEffect(()=>{
+        let cancelled = false
+        marvelApi(item.resourceURI).then((data)=> !cancelled && setItems(data));
+        return () => cancelled = true
+    }, [item])
 
 
-    componentWillUnmount(){
-        this.setState(()=>{return{
-            items: undefined
-        }})
-    }
-
-    render(){
-    const { children, onSelectItem, totalLoading} = this.props;
-    const {items} = this.state
     if (items === undefined){
-    return (
-        <Spiner />
+        return (
+            <Spiner />
     )} else{
         return (
             <div className='boxes'>
@@ -58,16 +46,6 @@ class CharacterDetals extends Component{
         )
     }
 }
-}
-const mapStateToProps = ({totalLoading}) => {
-    return { totalLoad };
-};
 
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        totalLoad: bindActionCreators(totalLoad, dispatch),
-        };
-    };
-
-export default connect(mapStateToProps, mapDispatchToProps)(CharacterDetals)
+export default CharacterDetals

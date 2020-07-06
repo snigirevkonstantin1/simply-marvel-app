@@ -3,7 +3,6 @@ import Spiner from '../spiner'
 
 
 const ComicsHead = ({title, activeImage, description, pageCount, load}) => {
-    console.log(load)
     return (
         <div className='comics__description'>
         <div className="comics__title">

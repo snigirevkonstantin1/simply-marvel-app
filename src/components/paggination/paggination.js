@@ -1,5 +1,5 @@
 import React, { useEffect  } from 'react';
-import './paggination.scss';
+import './paggination.css';
 import { WithMarvelService } from '../hoc';
 import { connect } from 'react-redux';
 import { selectCharacterPage, totalLoaded } from '../../actions';
@@ -17,6 +17,7 @@ const Paggination = ({ selectPage, loading, marvelApi, totalPage, totalLoaded, p
         return <span></span>
     }
     else{
+        console.log(page)
         return(
             <nav aria-label="nav__area">
                 <ul className="pagination justify-content-center">

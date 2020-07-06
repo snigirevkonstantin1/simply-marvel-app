@@ -9,17 +9,17 @@ const renderItem = (func, page, total, content) => {
     }
 };
 
-
+//fix me
 const PaginationListItem = ({page, totalPage, selectPage}) =>{
     return (
         <React.Fragment>
                     {renderItem(()=> selectPage(0), page, 0, 1)}
                     {renderItem(()=> selectPage(page-3), page-3, 1, '...')}
                     {renderItem(()=> selectPage(page-1), page, 1, page)}
-                    <li className="page-item active"><span className="page-link" >{(page===totalPage)? totalPage : page+1}</span></li>
-                    {renderItem(()=> selectPage(page + 1), totalPage, page+1, page + 2 )}
+                    <li className="page-item active"><span className="page-link" >{(page===totalPage)? totalPage+1 : page+1}</span></li>
+                    {renderItem(()=> selectPage(page + 1), totalPage +1, page+1, page + 2 )}
                     {renderItem(()=> selectPage(page + 4), totalPage, page+4, '...' )}
-                    {renderItem(()=> selectPage(totalPage), totalPage, page+2, totalPage )}
+                    {renderItem(()=> selectPage(totalPage), totalPage + 1, page+2, totalPage + 1 )}
         </React.Fragment>
     )
 };

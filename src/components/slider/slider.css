@@ -1,0 +1,9 @@
+.swiper-container {
+    background: none;
+}
+.swiper-container-3d .swiper-slide-shadow-right,
+.swiper-container-3d .swiper-slide-shadow-left{
+    background-image: none;
+}
+/* background-image: linear-gradient(to left, rgba(0, 0, 0, .01), rgba(0, 0, 0, 0));
+background-image: linear-gradient(to right, rgba(0, 0, 0, .01), rgba(0, 0, 0, 0)); */

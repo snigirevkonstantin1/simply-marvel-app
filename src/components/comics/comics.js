@@ -19,8 +19,6 @@ class Comics extends Component {
     };
     componentDidUpdate(prevState){
         if (this.state.activeImage !== prevState.activeImage){
-            console.log(this.state.activeImage)
-            console.log(prevState.activeImage)
             }
     }
     update(){
@@ -35,7 +33,6 @@ class Comics extends Component {
 
     onChangeImage = (url) => {
         this.setState(()=>{
-            console.log("change")
             return {
             activeImage: url.replace(/portrait_incredible/, 'portrait_uncanny'),
             load:false
@@ -46,7 +43,6 @@ class Comics extends Component {
 
     render(){
         const {activeItem, marvelApi, history} = this.props;
-        console.log(history)
         if (activeItem !== undefined && activeItem.length !== 0 && activeItem.pageCount){
 
             const { characters, description, images, pageCount, title, id } = activeItem;
